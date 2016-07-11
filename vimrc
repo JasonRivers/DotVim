@@ -9,10 +9,12 @@ call vundle#begin()
 
 " let Vundle manage Vundle, required
 Plugin 'VundleVim/Vundle.vim'
+Plugin 'godlygeek/tabular'
 Plugin 'scrooloose/nerdtree'
 Plugin 'ngn/vim-apl'
 Plugin 'airblade/vim-gitgutter'
-
+Plugin 'valloric/youcompleteme'
+Plugin 'plasticboy/vim-markdown'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -28,6 +30,9 @@ set tabstop=4
 set shiftwidth=4
 set softtabstop=4
 set expandtab
+
+" custom colour scheme
+color jr
 
 " guess tabs or spaces
 au bufread * cal <sid>et()
@@ -55,3 +60,8 @@ let g:gitgutter_sign_modified = '~~'
 let g:gitgutter_highlight_lines = 1 " Do Highlight lines
 let g:gitgutter_realtime = 1
 let g:git_gutter_eager = 1
+
+" keys:
+
+map <C-n> :NERDTreeToggle<CR>
+map <C-h> ::GitGutterLineHighlightsToggle<CR>
